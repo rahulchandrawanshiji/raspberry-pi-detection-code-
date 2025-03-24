@@ -1,0 +1,119 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 350px;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 15px;
+        }
+        #clickButton {
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            background: #ff7eb3;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #clickButton:hover {
+            background: #ff5177;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Object Detection</h1>
+        <button id="clickButton">Start Object Detection</button>
+    </div>
+
+    <script>
+        document.getElementById("clickButton").addEventListener("click", function() {
+            fetch("/start-detection/")
+                .then(response => response.json())
+                .then(data => alert(data.message))
+                .catch(error => console.error("Error:", error));
+        });
+    </script>
+</body>
+</html> -->
+
+
+<!-- <div class="container">
+    <h1>Smart Object Detection</h1>
+    <button id="clickButton">Start Object Detection</button>
+    <br><br>
+    <img id="videoStream" src="/video_feed/" width="100%" style="border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.2);" />
+</div> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Arial', sans-serif;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 350px;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 15px;
+        }
+        #stream {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Smart Object Detection</h1>
+        <img id="stream" src="/video_feed/" alt="Live Stream">
+    </div>
+</body>
+</html>
